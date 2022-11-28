@@ -2,16 +2,13 @@
 // m = 2, n = 3 -> A(m,n) = 9
 // m = 3, n = 2 -> A(m,n) = 29
 
-Console.WriteLine("Введите два положительных числа: M и N.");
-int m = InputInt("Введите M: ");
-int n = InputInt("Введите N: ");
-Console.WriteLine($"A({m}, {n}) = {Akkerman(m, n)}");
+Console.WriteLine("Введите положительное число М: ");
+int m = Convert.ToInt32(Console.ReadLine());
 
-int InputInt(string output)
-{
-    Console.Write(output);
-    return int.Parse(Console.ReadLine());
-}
+Console.WriteLine("Введите положительное число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"A({m}, {n}) = {Akkerman(m, n)}");
 
 int Akkerman(int m, int n)
 {
@@ -22,4 +19,5 @@ int Akkerman(int m, int n)
     else
         return Akkerman(m - 1, Akkerman(m, n - 1));
 }
+
 

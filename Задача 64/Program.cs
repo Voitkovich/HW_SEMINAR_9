@@ -23,8 +23,3 @@ int NaturalNumber(int n, int m)
     return m;
 }
 
-int InputInt(string output)
-{
-    Console.Write(output);
-    return int.Parse(Console.ReadLine());
-}

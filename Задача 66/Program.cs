@@ -2,20 +2,18 @@
 
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
+Console.WriteLine("Введите число М: ");
+int m = Convert.ToInt32(Console.ReadLine());
 
-int m = InputInt("Введите M:");
-int n = InputInt("Введите N:");
-Console.WriteLine($"Сумма элементов от {m} до {n} = {CountNaturalSum(m, n)}");
+Console.WriteLine("Введите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Сумма элементов от {m} до {n} = {NaturalSum(m, n)}");
 
-int InputInt(string output)
-{
-    Console.Write(output);
-    return int.Parse(Console.ReadLine());
-}
 
-int CountNaturalSum(int m, int n)
+int NaturalSum(int m, int n)
 {
     if (m == n)
         return n;
-    return n + CountNaturalSum(m, n - 1);
+    return n + NaturalSum(m, n - 1);
 }
+
